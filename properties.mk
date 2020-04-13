@@ -166,6 +166,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable_bframes=1 \
     vendor.vidc.enc.disable.pq=true
 
+# Misc tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.sleep_mode=1
+
 # Netflix
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.netflix.bsp_rev=Q660-13149-1
