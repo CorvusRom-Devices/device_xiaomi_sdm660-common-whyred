@@ -28,17 +28,21 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-du
+    $(LOCAL_PATH)/overlay 
+    
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+PRODUCT_BOARD_PLATFORM := msm8998
+PRODUCT_USE_QCOM_HARDWARE := true
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH) 
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # MiuiCamera
-$(call inherit-product, vendor/MiuiCamera/config.mk)
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -150,8 +154,8 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
+#PRODUCT_COPY_FILES += \
+    #external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:#$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Biometrics
 PRODUCT_PACKAGES += \
@@ -231,8 +235,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.1_vendor
 
 # Doze
-PRODUCT_PACKAGES += \
-    XiaomiDoze
+#PRODUCT_PACKAGES += \
+    #XiaomiDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -251,8 +255,8 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+#PRODUCT_BOOT_JARS += \
+    #qcom.fmradio
 endif
 
 # fwk-detect
@@ -389,7 +393,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.2-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
@@ -441,8 +445,8 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+    #telephony-ext
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v29.so \
@@ -459,13 +463,17 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service
 
 
+
 # Shims
 PRODUCT_PACKAGES += \
     libdpmframework_shim
 
 # Signapk
 PRODUCT_HOST_PACKAGES += \
-    signapk
+    signapk \
+    avbtool \
+    brotli \
+    aapt2
 
 
 # Tetheroffload
@@ -519,8 +527,8 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+    #WfdCommon
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sdm660-common/sdm660-common-vendor.mk)
