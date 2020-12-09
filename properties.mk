@@ -247,6 +247,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.debug.wfd.enable=1
 
+# By default, enable zram; experiment can toggle the flag,
+# which takes effect on boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.zram_enabled=1
+
 # Zygote preforking
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
