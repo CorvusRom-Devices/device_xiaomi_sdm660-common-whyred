@@ -247,6 +247,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.debug.wfd.enable=1
 
+# Bluetooth WiPower
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.bluetooth.emb_wp_mode=false \
+    ro.vendor.bluetooth.wipower=false
+
+
 # By default, enable zram; experiment can toggle the flag,
 # which takes effect on boot
 PRODUCT_PROPERTY_OVERRIDES += \
