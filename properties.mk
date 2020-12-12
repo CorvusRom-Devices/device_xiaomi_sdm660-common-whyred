@@ -168,6 +168,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sdm.support_writeback=0 \
     ro.surface_flinger.supports_background_blur=1 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.wcg_composition_dataspace=143261696 \
     ro.sf.blurs_are_expensive=1 \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=0 \
