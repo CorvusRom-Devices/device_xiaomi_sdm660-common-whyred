@@ -200,9 +200,8 @@ PRODUCT_PACKAGES += \
     memtrack.sdm660 \
     libdisplayconfig \
     liboverlay \
-    libtinyxml \
-    libqdMetaData \
-    libqdMetaData.system
+    libtinyxml 
+
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
@@ -507,8 +506,16 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libaacwrapper
-    libnl
+    libnl \
+    libqdMetaData \
+    libqdMetaData.system \
+    libavservices_minijail_vendor \
+    libavservices_minijail.vendor \
+    libavservices_minijail_32 \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor 
+     
+
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
