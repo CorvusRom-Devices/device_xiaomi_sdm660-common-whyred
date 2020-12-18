@@ -221,7 +221,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     vendor.display.config@1.9 \
-    vendor.display.config@1.9.vendor
+    vendor.display.config@1.9.vendor \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor
 
 
 # Doze
@@ -512,7 +514,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libqdMetaData \
+    libgralloc.qti \
+    libstagefright_enc_common \
     libqdMetaData.system \
+    libqdMetaData.vendor \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
     libavservices_minijail_32 \
