@@ -1,4 +1,5 @@
 allow bootanim sysfs_kgsl:dir search;
 allow bootanim userspace_reboot_exported_prop:file { read open getattr };
 allow bootanim sysfs_kgsl:lnk_file { read };
-
+allow bootanim vendor_system_prop:file { getattr read open };
+allow bootanim userspace_reboot_exported_prop:file { read open getattr };

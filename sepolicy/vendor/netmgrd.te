@@ -2,3 +2,5 @@ allow netmgrd property_socket:sock_file write;
 allow netmgrd socket_device:dir write;
 allow netmgrd init:unix_stream_socket connectto;
 set_prop(netmgrd, vendor_default_prop)
+allow netmgrd diag_device:chr_file { open read getattr };
+allow netmgrd diag_device:chr_file { ioctl };

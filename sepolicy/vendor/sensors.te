@@ -1,0 +1,8 @@
+allow sensors diag_device:chr_file { open read write getattr };
+allow sensors diag_device:chr_file { ioctl };
+allow sensors sysfs:dir { open read };
+allow sensors sysfs:file { open read };
+
+
+
+

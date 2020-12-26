@@ -1,0 +1,1 @@
+allow wcnss_service vfat:file { open read getattr };

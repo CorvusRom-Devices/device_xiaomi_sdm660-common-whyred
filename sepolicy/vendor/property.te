@@ -3,3 +3,5 @@ type mlipay_prop, property_type;
 type thermal_engine_prop, property_type;
 type vendor_thermal_prop, property_type;
 #type wfd_service_prop, property_type, extended_core_property_type;
+#type vendor_system_prop, property_type;
+

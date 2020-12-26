@@ -1,0 +1,2 @@
+allow rild diag_device:chr_file { open read write getattr };
+allow rild diag_device:chr_file { ioctl };

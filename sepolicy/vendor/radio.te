@@ -19,3 +19,8 @@ dontaudit {
     sensors
     vendor_dpmd
 } diag_device:chr_file { read write };
+
+allow radio cnd:binder { call };
+allow radio unlabeled:file { open read getattr };
+allow radio qcom_ims_prop:file { open read getattr };
+allow radio cnd:binder { transfer };

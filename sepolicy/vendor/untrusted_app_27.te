@@ -1,0 +1,13 @@
+allow untrusted_app_27 cpu_variant_prop:file { open read getattr };
+allow untrusted_app_27 ctl_apexd_prop:file { open read getattr };
+allow untrusted_app_27 ctl_gsid_prop:file { open read getattr };
+allow untrusted_app_27 rootfs:dir { read };
+allow untrusted_app_27 adbd_prop:file { open };
+allow untrusted_app_27 adbd_prop:file { getattr };
+allow untrusted_app_27 adsprpc_prop:file { open };
+allow untrusted_app_27 adsprpc_prop:file { getattr };
+allow untrusted_app_27 apexd_prop:file { open };
+allow untrusted_app_27 apexd_prop:file { getattr };
+allow untrusted_app_27 apk_verity_prop:file { open };
+allow untrusted_app_27 apk_verity_prop:file { getattr };
+allow untrusted_app_27 bg_boot_complete_prop:file { open };

@@ -1,0 +1,2 @@
+allow hvdcp sysfs_battery_supply:dir { add_name };
+allow hvdcp sysfs_battery_supply:file { create };
