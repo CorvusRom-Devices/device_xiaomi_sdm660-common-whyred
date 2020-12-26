@@ -1,1 +1,6 @@
 dontaudit fsck self:capability { dac_override dac_read_search };
+allow fsck mnt_vendor_file:dir { getattr };
+allow fsck tmpfs:blk_file { getattr };
+allow fsck_untrusted vold_device:blk_file { ioctl };
+allow fsck fsck:capability { kill };
+

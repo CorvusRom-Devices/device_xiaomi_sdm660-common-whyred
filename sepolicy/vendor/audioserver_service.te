@@ -1,0 +1,1 @@
+allow audioserver_service audioserver_service:service_manager { find };

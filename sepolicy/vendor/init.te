@@ -3,4 +3,5 @@
 allow init sysfs_type:file { setattr };
 allow init socket_device:sock_file { unlink setattr create };
 allow init su:process { noatsecure  rlimitinh  siginh  transition };
-
+allow init init:binder { call  transfer };
+allow init init:netlink_route_socket { read };

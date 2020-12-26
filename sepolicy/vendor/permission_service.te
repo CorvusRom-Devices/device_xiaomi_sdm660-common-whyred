@@ -1,0 +1,1 @@
+allow permission_service permission_service:service_manager { find };
