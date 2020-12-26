@@ -11,3 +11,4 @@ allow untrusted_app_27 apexd_prop:file { getattr };
 allow untrusted_app_27 apk_verity_prop:file { open };
 allow untrusted_app_27 apk_verity_prop:file { getattr };
 allow untrusted_app_27 bg_boot_complete_prop:file { open };
+allow untrusted_app_27 theme_prop:file { read open getattr };

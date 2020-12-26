@@ -1,8 +1,14 @@
 
 # Allow init to chown/chmod on pseudo files in /sys
-allow init sysfs_type:file { setattr };
+allow init sysfs_type:file { read getattr open setattr  };
 allow init socket_device:sock_file { unlink setattr create };
 allow init su:process { noatsecure  rlimitinh  siginh  transition };
 allow init init:binder { call  transfer };
 allow init init:netlink_route_socket { read };
 allow init su:process { transition };
+allow init vendor_file:file { execute_no_trans };
+allow init sysfs:file { read getattr open setattr  };
+allow init hal_power_stats_hwservice:hwservice_manager { add find };
+allow init hidl_base_hwservice:hwservice_manager { add };
+allow init system_file:file { execute_no_trans };
+allow init system_file:file { mounton };

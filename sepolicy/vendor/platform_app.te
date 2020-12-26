@@ -43,3 +43,5 @@ allow platform_app vendor_mdm_helper_prop:file { open read getattr };
 #allow platform_app vendor_mm_parser_prop:file { open read getattr };
 #allow platform_app vendor_mm_video_prop:file { open read getattr };
 allow platform_app vendor_wigig_prop:file { open read getattr };
+allow platform_app time_daemon:unix_stream_socket { connectto };
+allow platform_app exported_camera_prop:file { getattr open read };
