@@ -23,4 +23,4 @@ allow system_server userspace_reboot_exported_prop:file { read };
 allow system_server hal_light_default:process { signal };
 allow system_server proc:file { read };
 allow system_server proc:file { open };
-allow system_server init:binder { call };
+allow system_server init:binder { transfer call };

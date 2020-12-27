@@ -20,6 +20,9 @@ allow vendor_toolbox sensors_persist_file:file { getattr };
 allow vendor_toolbox persist_drm_file:file { getattr };
 allow vendor_toolbox persist_time_file:file { getattr };
 allow vendor_toolbox persist_rfs_file:file { getattr };
+allow vendor_toolbox persist_bms_file:file { getattr };
+allow vendor_toolbox persist_bluetooth_file:file { getattr };
+allow vendor_toolbox vendor_persist_mmi_file:file { getattr };
 
 # Allow vendor_toolbox to remove "security.*" xattrs from /mnt/vendor/persist
 allow vendor_toolbox {

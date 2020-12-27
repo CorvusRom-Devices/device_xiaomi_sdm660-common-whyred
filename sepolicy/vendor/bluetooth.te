@@ -1,1 +1,4 @@
 allow bluetooth unlabeled:file { open read getattr };
+allow bluetooth gpuservice:binder { call };
+allow bluetooth theme_prop:file { open };
+allow bluetooth theme_prop:file { getattr };

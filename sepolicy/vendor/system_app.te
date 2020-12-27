@@ -23,4 +23,14 @@ allow system_app sysfs:file { write };
 allow system_app sysfs:file { open };
 allow system_app sysfs:file { getattr };
 allow system_app sysfs_msm_perf:dir { search };
-
+allow system_app theme_prop:file { read };
+allow system_app theme_prop:file { open };
+allow system_app theme_prop:file { getattr };
+allow system_app proc_vmallocinfo:file { read };
+allow system_app proc_vmallocinfo:file { open };
+allow system_app proc_vmallocinfo:file { getattr };
+allow system_app selinuxfs:file { read };
+allow system_app selinuxfs:file { open };
+allow system_app system_data_file:dir { add_name };
+allow system_app system_data_file:dir { create };
+allow system_app system_data_file:dir { setattr };
