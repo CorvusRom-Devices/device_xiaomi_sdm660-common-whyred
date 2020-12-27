@@ -1,1 +1,2 @@
 allow mediaserver vendor_sys_video_prop:file { read open getattr };
+allow mediaserver vendor_default_prop:file { read };

@@ -46,4 +46,5 @@ allow platform_app vendor_wigig_prop:file { open read getattr };
 allow platform_app time_daemon:unix_stream_socket { connectto };
 allow platform_app exported_camera_prop:file { getattr open read };
 allow platform_app theme_prop:file { read open getattr };
-
+allow platform_app sysfs_kgsl:dir { search };
+allow platform_app vendor_default_prop:file { getattr  open read };

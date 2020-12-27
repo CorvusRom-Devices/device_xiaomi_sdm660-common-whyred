@@ -4,5 +4,5 @@ allow hal_audio_default diag_device:chr_file { read write open };
 allow hal_audio_default hal_audio_default:dir { search };
 allow hal_audio_default diag_device:chr_file { read write open };
 allow hal_audio_default diag_device:chr_file { ioctl };
-allow hal_audio_default default_prop:file { read };
-allow hal_audio_default default_prop:file { open };
+allow hal_audio_default default_prop:file { read open getattr };
+allow hal_audio_default audio_prop:file { read open getattr };

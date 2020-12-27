@@ -12,3 +12,4 @@ allow init hal_power_stats_hwservice:hwservice_manager { add find };
 allow init hidl_base_hwservice:hwservice_manager { add };
 allow init system_file:file { execute_no_trans };
 allow init system_file:file { mounton };
+allow init hal_perf_default:binder { call };
