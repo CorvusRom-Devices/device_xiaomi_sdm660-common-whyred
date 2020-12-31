@@ -26,7 +26,7 @@ $(call inherit-product, $(LOCAL_PATH)/properties.mk)
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Dirac
-$(call inherit-product, vendor/dirac/dirac.mk)
+$(call inherit-product-if-exists, vendor/dirac/dirac.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -38,6 +38,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Enable updatable APEX
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -188,7 +191,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Device-specific Settings
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Display

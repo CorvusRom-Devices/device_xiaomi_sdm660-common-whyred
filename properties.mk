@@ -86,6 +86,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.vc_call_vol_steps=7 \
     vendor.audio.adm.buffering.ms=6
 
+# Apex
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.apex.updatable=true
+
 #Blur
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
