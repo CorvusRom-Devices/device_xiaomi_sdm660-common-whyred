@@ -149,6 +149,46 @@
 
     <!-- Wifi driver supports batched scan -->
     <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
+    
+    <!-- Array of desired screen brightness in nits corresponding to the lux values
+         in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
+         config_screenBrightnessMaximumNits, the display brightness is defined as the measured
+         brightness of an all-white image.
+         If this is defined then:
+            - config_autoBrightnessLcdBacklightValues should not be defined
+            - config_screenBrightnessNits must be defined
+            - config_screenBrightnessBacklight must be defined
+         This array should have size one greater than the size of the config_autoBrightnessLevels
+         array. The brightness values must be non-negative and non-decreasing. This must be
+         overridden in platform specific overlays -->
+    <integer-array name="config_autoBrightnessDisplayValuesNits">
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>15</item>
+        <item>25</item>
+        <item>39</item>
+        <item>48</item>
+        <item>64</item>
+        <item>80</item>
+        <item>88</item>
+        <item>88</item>
+        <item>92</item>
+        <item>98</item>
+        <item>114</item>
+        <item>124</item>
+        <item>132</item>
+        <item>142</item>
+        <item>178</item>
+        <item>196</item>
+        <item>222</item>
+        <item>344</item>
+        <item>407</item>
+        <item>482</item>
+        <item>497</item>
+    </integer-array>
+
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -169,16 +209,33 @@
          Spline interpolation is used to determine the auto-brightness
          backlight values for LUX levels between these control points.
 
-         Must be overridden in platform specific overlays
+         Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>10</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>8</item>
+        <item>13</item>
+        <item>17</item>
+        <item>21</item>
+        <item>26</item>
         <item>30</item>
+        <item>34</item>
+        <item>39</item>
         <item>60</item>
-        <item>100</item>
-        <item>150</item>
-        <item>210</item>
-        <item>255</item>
-    </integer-array> -->
+        <item>140</item>
+        <item>310</item>
+        <item>400</item>
+        <item>500</item>
+        <item>600</item>
+        <item>1000</item>
+        <item>1200</item>
+        <item>1500</item>
+        <item>3000</item>
+        <item>3500</item>
+        <item>4000</item>  
+    </integer-array> 
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -186,17 +243,31 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>2</item>
-        <item>10</item>
-        <item>18</item>
-        <item>29</item>
+      <item>48</item>
         <item>48</item>
-        <item>74</item>
-        <item>107</item>
-        <item>152</item>
-        <item>194</item>
-        <item>254</item>
-        <item>255</item>
+        <item>48</item>
+        <item>48</item>
+        <item>128</item>
+        <item>208</item>
+        <item>320</item>
+        <item>400</item>
+        <item>528</item>
+        <item>656</item>
+        <item>720</item>
+        <item>720</item>
+        <item>720</item>
+        <item>752</item>
+        <item>800</item>
+        <item>928</item>
+        <item>1008</item>
+        <item>1072</item>
+        <item>1152</item>
+        <item>1440</item>
+        <item>1584</item>
+        <item>1792</item>
+        <item>3328</item>
+        <item>3968</item>
+        <item>4095</item>  
     </integer-array> 
 
     <!-- MMS user agent string -->
