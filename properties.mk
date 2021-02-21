@@ -1,5 +1,5 @@
 #Build FP to be picked by both system and vendor
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.210105.003/7005429:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ1A.210205.004/7038034:user/release-keys"
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
